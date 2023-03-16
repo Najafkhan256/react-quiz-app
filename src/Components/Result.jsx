@@ -2,11 +2,13 @@ import React, { useContext } from "react";
 import { QuizContext } from "../Context/QuizWrapper";
 
 const Result = () => {
-  const { correct, setExit, setStart, quizzes } = useContext(QuizContext);
+  const { correct, setCorrect, setExit, setStart, quizzes } =
+    useContext(QuizContext);
 
   const PlayAgain = () => {
     setStart(false);
     setExit(false);
+    setCorrect(0)
   };
   return (
     <div className="w-full h-screen flex justify-center items-center">
